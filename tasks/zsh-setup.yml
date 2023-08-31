@@ -1,5 +1,5 @@
 - name: Install ZSH
-  apt: name=zsh
+  homebrew: name=zsh
   tags: &tags_for_zsh_tasks [ 'install', 'productivity', 'dotfiles', 'zsh' ]
     
 - name: Change shell to zsh
@@ -23,3 +23,18 @@
     repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
     dest: "~/.oh-my-zsh/plugins/zsh-autosuggestions"
   tags: *tags_for_zsh_tasks
+
+# Plugins previously installed by oh-my-zsh
+  # colored-man-pages
+  # gh
+  # git
+  # macos
+  # mvn
+  # npm
+  # nvm
+  # python
+  # rust
+  # spring
+  # terraform
+  # yarn
+  # web-search

@@ -5,32 +5,27 @@
   tags:
     - install
     - node
-- name: Install eslint
+
+- name: Install Trash CLI 
   npm:
-    name: eslint
-    global: yes
-  tags:
-    - install
-    - node
-- name: Install Typescript server
-  npm:
-    name: typescript-language-server
-    global: yes
-  tags:
-    - install
-    - node
-- name: Install Typescript
-  npm:
-    name: typescript
-    global: yes
-  tags:
-    - install
-    - node
-- name: Install TS-Node
-  npm:
-    name: ts-node
+    name: trash-cli
     global: yes
   tags:
     - install
     - node
 
+- name: Install NPM Check Updates
+  npm:
+    name: npm-check-updates
+    global: yes
+  tags:
+    - install
+    - node
+    
+- name: Install Canvas Sketch CLI
+  npm:
+    name: canvas-sketch-cli
+    global: yes
+  tags:
+    - install
+    - node

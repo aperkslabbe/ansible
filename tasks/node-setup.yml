@@ -6,32 +6,33 @@
     - install
     - node
 
-- name: npmjs prefix
-  shell: mkdir -p ~/.local/.npm-global
-  tags:
-  - install
-  - node
+# - name: npmjs prefix
+#   shell: mkdir -p ~/.local/.npm-global
+#   tags:
+#   - install
+#   - node
 
-- name: add npmjs to path
-  shell: PATH=~/.local/.npm-global/bin:$PATH
-  tags:
-  - install
-  - node
+# - name: add npmjs to path
+#   shell: PATH=~/.local/.npm-global/bin:$PATH
+#   tags:
+#   - install
+#   - node
 
-- name: npmjs global settings
-  shell: npm config set prefix '~/.local/.npm-global'
-  tags:
-  - install
-  - node
+# - name: npmjs global settings
+#   shell: npm config set prefix '~/.local/.npm-global'
+#   tags:
+#   - install
+#   - node
 
-- name: npmjs global settings export path in case I don't have dotfiles installed
-  shell: export PATH=~/.local/.npm-global/bin:$PATH
-  tags:
-  - install
-  - node
-  - npm-path
+# - name: npmjs global settings export path in case I don't have dotfiles installed
+#   shell: export PATH=~/.local/.npm-global/bin:$PATH
+#   tags:
+#   - install
+#   - node
+#   - npm-path
 
-- name: Install N
+# https://github.com/tj/n
+- name: Install node version manager n
   npm:
     name: n
     global: yes
@@ -39,8 +40,8 @@
     - install
     - node
 
-- name: Install correct version of Node
-  shell: n 14
+- name: Install node version 18
+  shell: n 18
   tags:
     - install
     - node
